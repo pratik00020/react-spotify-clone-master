@@ -16,10 +16,12 @@ function Hader() {
     });
   };
 
+  
   const toggelShowAccountOptions = (e) => {
     setShowAccountAptions(!showAccountOptions);
   };
 
+  
   const logout = () => {
     cookies.remove("loginToken");
     dispatch({
@@ -32,6 +34,7 @@ function Hader() {
     });
   };
 
+  
   return (
     <div id="header-container" style={{ backgroundColor: albumColor }}>
       <div id="back-and-forward-container">
