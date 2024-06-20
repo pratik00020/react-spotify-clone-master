@@ -15,6 +15,7 @@ function Artist({ match }) {
   const [{ playlist, user }] = useStateValue();
   const cookies = new Cookies();
 
+  
   useEffect(() => {
     fetch(
       `${BASE_URL}getArtistInfo.php?id=${match.params.id}&token=${cookies.get(
@@ -46,6 +47,7 @@ function Artist({ match }) {
       });
   }, []);
 
+  
   useEffect(() => {
     return () => {
       dispatch({
@@ -54,6 +56,9 @@ function Artist({ match }) {
       });
     };
   }, []);
+
+
+  
   return (
     <div>
       <AlbumHader
