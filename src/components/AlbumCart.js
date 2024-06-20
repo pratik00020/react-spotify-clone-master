@@ -20,6 +20,7 @@ function AlbumCart({ img, title, discription, id, isArtist = false }) {
         type: "UPDATE_SONG_STATUS",
         item: !isPlaying,
       });
+      
     } else {
       fetch(
         `${BASE_URL}getAlbumInfo.php?id=${id}&token=${cookies.get(
@@ -45,6 +46,9 @@ function AlbumCart({ img, title, discription, id, isArtist = false }) {
     }
   };
 
+
+
+  
   return (
     <Link
       to={isArtist ? "/artist/" + id : "/album/" + id}
